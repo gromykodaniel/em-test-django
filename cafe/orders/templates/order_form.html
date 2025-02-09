@@ -1,0 +1,9 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <p>Примечание - В итоговую выручку за день добавляются заказы только с статусом 'оплачено'</p>
+
+    <button type="submit">Сохранить</button>
+</form>
+<a href="{% url 'order_list' %}">Назад</a>
